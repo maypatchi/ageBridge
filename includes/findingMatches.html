@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/ageBridge.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>איתור התאמות</title>
+</head>
+
+<body>
+    <header id="header">
+        <nav class="navbar navbar-light navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="home.php"><img id="logo" class="img-fluid" src="../images/logoHome.png"
+                        alt="logo"></a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link desA" href="home.php">דף הבית</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link desA" href="profile.php">הפרופיל שלי</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link desA" href="myFriends.php">החברים שלי</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active desA" href="findingMatches.html">איתור התאמות</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link desA" href="#">היומן שלי</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link desA" href="#">פורום</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link desA" href="#">התנתק מהמערכת</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container2">
+                <h2>איתור התאמות</h2>
+                <form action="findingMatches.php" method="post" onsubmit="return validateForm()">
+                    <div class="formGroup">
+                        <label class="label-finding-matches">אילו תחומי עניין תרצה שיהיו לחברים החדשים שלך?</label>
+                        <div class="hobbies-container">
+                            <div class="section">
+                                <input type="checkbox" id="tennis" name="hobbies[]" value="טניס"
+                                    class="input-finding-matches checkbox-finding-matches">
+                                <label class="label-finding-matches">טניס</label><br>
+
+                                <input type="checkbox" id="football" name="hobbies[]" value="כדורגל"
+                                    class="input-finding-matches checkbox-finding-matches">
+                                <label class="label-finding-matches">כדורגל</label><br>
+
+                                <input type="checkbox" id="basketball" name="hobbies[]" value="כדורסל"
+                                    class="input-finding-matches checkbox-finding-matches">
+                                <label class="label-finding-matches">כדורסל</label><br>
+
+                                <input type="checkbox" id="board_games" name="hobbies[]" value="משחקי קופסא"
+                                    class="input-finding-matches checkbox-finding-matches">
+                                <label class="label-finding-matches">משחקי קופסא</label><br>
+
+                                <input type="checkbox" id="dancing" name="hobbies[]" value="ריקוד"
+                                    class="input-finding-matches checkbox-finding-matches">
+                                <label class="label-finding-matches">ריקוד</label><br>
+
+                                <input type="checkbox" id="singing" name="hobbies[]" value="שירה"
+                                    class="input-finding-matches checkbox-finding-matches">
+                                <label class="label-finding-matches">שירה</label><br>
+                            </div>
+                            <div class="section">
+                                <input type="checkbox" id="playing_instrument" name="hobbies[]" value="נגינה"
+                                    class="input-finding-matches checkbox-finding-matches">
+                                <label class="label-finding-matches">נגינה</label><br>
+
+                                <input type="checkbox" id="chess" name="hobbies[]" value="שחמט"
+                                    class="input-finding-matches checkbox-finding-matches">
+                                <label class="label-finding-matches">שחמט</label><br>
+
+                                <input type="checkbox" id="video_games" name="hobbies[]" value="דמקה"
+                                    class="input-finding-matches checkbox-finding-matches">
+                                <label class="label-finding-matches">דמקה</label><br>
+
+                                <input type="checkbox" id="backgammon" name="hobbies[]" value="שש-בש"
+                                    class="input-finding-matches checkbox-finding-matches">
+                                <label class="label-finding-matches">שש-בש</label><br>
+
+                                <input type="checkbox" id="cooking" name="hobbies[]" value="בישול"
+                                    class="input-finding-matches checkbox-finding-matches">
+                                <label class="label-finding-matches">בישול</label><br>
+
+                                <input type="checkbox" id="painting" name="hobbies[]" value="ציור"
+                                    class="input-finding-matches checkbox-finding-matches">
+                                <label class="label-finding-matches">ציור</label><br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formGroup">
+                        <label class="label-finding-matches">באיזה מרחק תרצה שנחפש עבורך חברים חדשים? <b><output
+                                    id="distanceOutput"></output></b> </label>
+                        <div class="slider-container">
+                            <div>0 ק"מ</div>
+                            <input type="range" id="distance" name="distance" min="0" max="60" value="30">
+                            <div>60 ק"מ</div>
+                        </div>
+                    </div>
+
+                    <div class="formGroup">
+                        <button class="btn-design btnCenter" type="submit">מצא התאמות</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 כל הזכויות שמורות לאילנה, אלינה ומאי</p>
+        <a href="#header"><img id="desing-up-arrow" src="../images/up-arrow.png"></a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="../JS/findingMatches.js"></script>
+
+</body>
+
+</html>

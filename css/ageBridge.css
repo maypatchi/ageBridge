@@ -1,0 +1,516 @@
+html {
+    height: 100%;
+}
+
+main {
+    flex: 1 0 auto;
+    background-color: #f4fdff;
+}
+
+body {
+    text-align: right;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-info {
+    position: sticky;
+    top: 0;
+    right: 0;
+    flex: 4;
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    height: 100vh;
+    direction: rtl;
+}
+
+
+.login-info img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+
+.login-form {
+    flex: 6;
+    margin: auto 10px;
+}
+
+
+.input-design-login-form {
+    width: 70%;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    direction: rtl;
+    display: block;
+}
+
+#color-btn{
+    background-color: rgb(60, 124, 227);
+    color: white;
+}
+
+.error-design{
+    width: 70%;
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    color: red;
+}
+
+.register-option {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.registration-form {
+    flex: 6;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding-right: 30px;
+}
+
+
+.input-design-registration-form {
+    width: 70%;
+    padding: 10px;
+    float: right;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    direction: rtl;
+    display: block;
+}
+
+
+input[type="radio"] {
+    float: right;
+    margin-bottom: 20px;
+    margin-right: 0;
+}
+
+.lbl1 {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.lbl2 {
+    margin-right: 5px;
+}
+
+
+.checkbox-registration-form {
+    float: right;
+}
+
+
+.lbl2,
+input[type="radio"] {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
+.formGroup {
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+
+.hobbies-container {
+    display: flex;
+}
+
+
+.section {
+    flex: 1;
+}
+
+.required-note,
+.lbl1 .required {
+    color: red;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .login-info,
+    .registration-form {
+        flex: auto;
+        width: auto;
+        position: relative;
+        height: auto;
+    }
+
+
+    .login-form {
+        padding: 20px;
+    }
+
+
+    .login-info img {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+
+.btn-design {
+    background-color: rgb(60, 124, 227);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.btnLeft {
+    float: left;
+}
+
+.btnRight {
+    float: right;
+}
+
+.btnCenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.btn-design, #color-btn:hover {
+    background-color: rgb(13, 94, 247)
+}
+
+
+.profile-picture-container {
+    position: relative;
+    width: 30%;
+    height: 30%;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid black;
+    float: right;
+    margin: 10px 0px 10px 0px;
+}
+
+
+.profile-picture-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+#profilePictureInput {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    display: none;
+}
+
+/* עיצוב התפריט */
+
+.desA {
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+
+#logo {
+    width: 100px;
+    height: 60px;
+}
+
+
+nav {
+    background-color: #ddf2f7;
+    direction: rtl;
+}
+
+/*עיצוב מסך הבית*/
+
+.container1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.box {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.circle {
+    display: inline-block;
+    border: 2px solid black;
+    background-color: #f2f2f2;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 10px;
+    position: relative;
+    margin: 40px;
+}
+
+.circle-img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle-lable {
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+
+.request-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    direction: rtl;
+    justify-content: center;
+}
+
+.request-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+    width: 300px;
+}
+
+.request-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.request-card button {
+    margin-left: 10px;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#reject{
+    background-color: rgb(198, 198, 198);
+}
+
+#accept{
+    background-color: rgb(163, 189, 244);
+}
+
+@media (max-width: 1000px) {
+    #allCircles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    #twoCircles {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/*עיצוב איתור התאמות*/
+.container2 {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    direction: rtl;
+}
+
+
+.checkbox-finding-matches {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.label-finding-matches,
+.input-finding-matches {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+.slider-container {
+    display: flex;
+    align-items: center;
+}
+
+
+.slider-container input[type="range"] {
+    margin-left: 10px;
+    flex: 1;
+}
+
+
+#distance {
+    margin: 10px;
+}
+
+.match-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.match-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.match-card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+
+.match-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.match-card button:hover {
+    background-color: #0056b3;
+}
+
+
+#design-h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    direction: rtl;
+}
+
+/*footer*/
+footer {
+    background-color: #ddf2f7;
+    overflow: auto;
+    direction: rtl;
+    text-align: center;
+}
+
+#desing-up-arrow {
+    width: 45px;
+    float: left;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+/*עיצוב פרופיל*/
+
+.user-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+/*עיצוב רשימת החברים שלי*/
+
+.friend-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+}
+
+.friend-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}

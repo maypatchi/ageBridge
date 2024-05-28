@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/ageBridge.css">
+    <title>טופס פרטים אישיים</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="registration-form">
+            <form id="registrationForm" action="registrationForm.php" method="post" enctype="multipart/form-data">
+
+                <div id="part1">
+                    <h2>טופס הרשמה</h2>
+                    <div class="formGroup">
+                        <label class="lbl1"><span class="required">*</span> ?בתור מי תרצה/י להירשם</label>
+                        <input type="radio" name="type" value="מתנדב" required>
+                        <label class="lbl2">מתנדב</label><br>
+                        <input type="radio" name="type" value="מבוגר" required>
+                        <label class="lbl2">מבוגר</label>
+                    </div>
+
+                    <div class="formGroup">
+                        <label class="lbl1"><span class="required">*</span> שם פרטי</label>
+                        <input class="input-design-registration-form" type="text" id="firstName" name="firstName"
+                            required placeholder="הזן את השם הפרטי שלך בעברית, למשל: ישראל"><br>
+                    </div>
+
+                    <div class="formGroup">
+                        <label class="lbl1"><span class="required">*</span> שם משפחה</label>
+                        <input class="input-design-registration-form" type="text" id="lastName" name="lastName" required
+                            placeholder="הזן את שם המשפחה שלך בעברית, למשל: ישראלי"><br>
+                    </div>
+
+                    <div class="formGroup">
+                        <label class="lbl1" for="birthdate"><span class="required">*</span> תאריך לידה</label>
+                        <input class="input-design-registration-form" type="date" id="birthdate" name="birthdate"
+                            required><br>
+                    </div>
+
+                    <div class="formGroup">
+                        <label class="lbl1"><span class="required">*</span> מין</label>
+                        <input type="radio" name="gender" value="זכר" required>
+                        <label class="lbl2">זכר</label><br>
+                        <input type="radio" name="gender" value="נקבה" required>
+                        <label class="lbl2">נקבה</label>
+                    </div>
+
+                    <div class="formGroup">
+                        <label class="lbl1"><span class="required">*</span> עיר</label>
+                        <select class="input-design-registration-form" name="city" id="city" required>
+                            <option value="" disabled selected>בחר עיר</option>
+                            <option value="אופקים">אופקים</option>
+                            <option value="אור יהודה">אור יהודה</option>
+                            <option value="אור עקיבא">אור עקיבא</option>
+                            <option value="אילת">אילת</option>
+                            <option value="אלעד">אלעד</option>
+                            <option value="אריאל">אריאל</option>
+                            <option value="אשדוד">אשדוד</option>
+                            <option value="אשקלון">אשקלון</option>
+                            <option value="באר יעקב">באר יעקב</option>
+                            <option value="באר שבע">באר שבע</option>
+                            <option value="בארות יצחק">בארות יצחק</option>
+                            <option value="בית חשמונאי">בית חשמונאי</option>
+                            <option value="בית שאן">בית שאן</option>
+                            <option value="בית שמש">בית שמש</option>
+                            <option value="ביתר עילית">ביתר עילית</option>
+                            <option value="בני ברק">בני ברק</option>
+                            <option value="בנימינה">בנימינה</option>
+                            <option value="בת חפר">בת חפר</option>
+                            <option value="בת ים">בת ים</option>
+                            <option value="גבעת אולגה">גבעת אולגה</option>
+                            <option value="גבעת עדה">גבעת עדה</option>
+                            <option value="גבעת שאול ים">גבעת שאול ים</option>
+                            <option value="גבעתיים">גבעתיים</option>
+                            <option value="גדרה">גדרה</option>
+                            <option value="דימונה">דימונה</option>
+                            <option value="הוד השרון">הוד השרון</option>
+                            <option value="הרצליה">הרצליה</option>
+                            <option value="זכרון יעקב">זכרון יעקב</option>
+                            <option value="חדרה">חדרה</option>
+                            <option value="חולון">חולון</option>
+                            <option value="חיפה">חיפה</option>
+                            <option value="חצור הגלילית">חצור הגלילית</option>
+                            <option value="חריש">חריש</option>
+                            <option value="טבעון">טבעון</option>
+                            <option value="טבריה">טבריה</option>
+                            <option value="טירת הכרמל">טירת הכרמל</option>
+                            <option value="טירת כרמל">טירת כרמל</option>
+                            <option value="יבנה">יבנה</option>
+                            <option value="יהוד">יהוד</option>
+                            <option value="יוקנעם">יוקנעם</option>
+                            <option value="ירוחם">ירוחם</option>
+                            <option value="ירושלים">ירושלים</option>
+                            <option value="כפר ורדים">כפר ורדים</option>
+                            <option value="כפר יונה">כפר יונה</option>
+                            <option value="כפר נטר">כפר נטר</option>
+                            <option value="כפר סבא">כפר סבא</option>
+                            <option value="כפר תבור">כפר תבור</option>
+                            <option value="כרכור">כרכור</option>
+                            <option value="כרמיאל">כרמיאל</option>
+                            <option value="להבים">להבים</option>
+                            <option value="מבשרת ציון">מבשרת ציון</option>
+                            <option value="מגדל העמק">מגדל העמק</option>
+                            <option value="מודיעין">מודיעין</option>
+                            <option value="מודיעין מכבי">מודיעין מכבי</option>
+                            <option value="מזכרת בתיה">מזכרת בתיה</option>
+                            <option value="מיתר">מיתר</option>
+                            <option value="מעלה אדומים">מעלה אדומים</option>
+                            <option value="מעלות">מעלות</option>
+                            <option value="מצפה רמון">מצפה רמון</option>
+                            <option value="נהריה">נהריה</option>
+                            <option value="נוף הגליל">נוף הגליל</option>
+                            <option value="נס ציונה">נס ציונה</option>
+                            <option value="נשר">נשר</option>
+                            <option value="נתניה">נתניה</option>
+                            <option value="סביון">סביון</option>
+                            <option value="סיבוס נהריה">סיבוס נהריה</option>
+                            <option value="עכו">עכו</option>
+                            <option value="עמק חפר פארק">עמק חפר פארק</option>
+                            <option value="עפולה">עפולה</option>
+                            <option value="ערד">ערד</option>
+                            <option value="פרדס חנה כרכ">פרדס חנה כרכ</option>
+                            <option value="פרדסיה">פרדסיה</option>
+                            <option value="פתח תקווה">פתח תקווה</option>
+                            <option value="צור הדסה">צור הדסה</option>
+                            <option value="צור יגאל">צור יגאל</option>
+                            <option value="צור משה">צור משה</option>
+                            <option value="צורן קדימה">צורן קדימה</option>
+                            <option value="צפת">צפת</option>
+                            <option value="קצרין">קצרין</option>
+                            <option value="קריית אונו">קריית אונו</option>
+                            <option value="קריית אתא">קריית אתא</option>
+                            <option value="קרית אתא">קרית אתא</option>
+                            <option value="קרית ביאליק">קרית ביאליק</option>
+                            <option value="קרית גת">קרית גת</option>
+                            <option value="קרית חיים">קרית חיים</option>
+                            <option value="קרית טבעון">קרית טבעון</option>
+                            <option value="קרית מוצקין">קרית מוצקין</option>
+                            <option value="קרית ספר">קרית ספר</option>
+                            <option value="קרית עקרון">קרית עקרון</option>
+                            <option value="קרית שמונה">קרית שמונה</option>
+                            <option value="ראש העין">ראש העין</option>
+                            <option value="ראשון לציון">ראשון לציון</option>
+                            <option value="רהט">רהט</option>
+                            <option value="רחובות">רחובות</option>
+                            <option value="רמלה">רמלה</option>
+                            <option value="רמת גן">רמת גן</option>
+                            <option value="רמת השרון">רמת השרון</option>
+                            <option value="רעננה">רעננה</option>
+                            <option value="שדרות">שדרות</option>
+                            <option value="שוהם">שוהם</option>
+                            <option value="תל אביב">תל אביב</option>
+                            <option value="תל מונד">תל מונד</option>
+                        </select>
+                    </div>
+
+                    <div class="formGroup">
+                        <button id="btnContinue" class="btn-design btnLeft" type="button">המשך לחלק 2</button>
+                    </div>
+                </div>
+
+                <div id="part2" class="hidden">
+                    <h2>חלק 2: התחביבים שלך</h2>
+                    <div class="required-note">יש לבחור לפחות תחביב אחד </div><br>
+                    <div class="formGroup hobbies-container">
+                        <div class="section">
+                            <input type="checkbox" id="tennis" name="hobbies[]" value="טניס"
+                                class="lbl2 checkbox-registration-form">
+                            <label class="lbl1">טניס</label><br>
+
+                            <input type="checkbox" id="football" name="hobbies[]" value="כדורגל"
+                                class="lbl2 checkbox-registration-form">
+                            <label class="lbl1">כדורגל</label><br>
+
+                            <input type="checkbox" id="basketball" name="hobbies[]" value="כדורסל"
+                                class="lbl2 checkbox-registration-form">
+                            <label class="lbl1">כדורסל</label><br>
+
+                            <input type="checkbox" id="board_games" name="hobbies[]" value="משחקי קופסא"
+                                class="lbl2 checkbox-registration-form">
+                            <label class="lbl1">משחקי קופסא</label><br>
+
+                            <input type="checkbox" id="dancing" name="hobbies[]" value="ריקוד"
+                                class="lbl2 checkbox-registration-form">
+                            <label class="lbl1">ריקוד</label><br>
+
+                            <input type="checkbox" id="singing" name="hobbies[]" value="שירה"
+                                class="lbl2 checkbox-registration-form">
+                            <label class="lbl1">שירה</label><br>
+                        </div>
+
+                        <div class="section">
+                            <input type="checkbox" id="playing_instrument" name="hobbies[]" value="נגינה"
+                                class="lbl2 checkbox-registration-form">
+                            <label class="lbl1">נגינה</label><br>
+
+                            <input type="checkbox" id="chess" name="hobbies[]" value="שחמט"
+                                class="lbl2 checkbox-registration-form">
+                            <label class="lbl1">שחמט</label><br>
+
+                            <input type="checkbox" id="video_games" name="hobbies[]" value="דמקה"
+                                class="lbl2 checkbox-registration-form">
+                            <label class="lbl1">דמקה</label><br>
+
+                            <input type="checkbox" id="backgammon" name="hobbies[]" value="שש-בש"
+                                class="lbl2 checkbox-registration-form">
+                            <label class="lbl1">שש-בש</label><br>
+
+                            <input type="checkbox" id="cooking" name="hobbies[]" value="בישול"
+                                class="lbl2 checkbox-registration-form">
+                            <label class="lbl1">בישול</label><br>
+
+                            <input type="checkbox" id="painting" name="hobbies[]" value="ציור"
+                                class="lbl2 checkbox-registration-form">
+                            <label class="lbl1">ציור</label><br>
+                        </div>
+                    </div>
+
+                    <div class="formGroup">
+                        <button id="btnBack1" class="btn-design btnRight" type="button">חזור לחלק 1</button>
+                        <button id="btnContinue2" class="btn-design btnLeft" type="button">המשך לחלק 3</button>
+                    </div>
+                </div>
+
+                <div id="part3" class="hidden">
+                    <h2>!רק עוד קצת וסיימנו</h2>
+                    <div class="formGroup">
+                        <label class="lbl1"><span class="required">*</span> שם משתמש</label>
+                        <input class="input-design-registration-form" type="text" id="username" name="username" required
+                            placeholder="הזן שם משתמש לבחירתך, השתמש באותיות באנגלית ובמספרים"
+                            title="ניתן להזין אותיות באנגלית ומספרים בלבד"><br>
+                    </div>
+
+                    <div class="formGroup">
+                        <label class="lbl1"><span class="required">*</span> סיסמה</label>
+                        <input class="input-design-registration-form" type="password" id="password" name="password"
+                            required placeholder="הזן שם משתמש לבחירתך, השתמש באותיות באנגלית ובמספרים"
+                            title="ניתן להזין אותיות באנגלית ומספרים בלבד"><br>
+                    </div>
+
+                    <div class="formGroup">
+                        <label class="lbl1"><span class="required">*</span> תמונת פרופיל</label>
+                        <div class="profile-picture-container">
+                            <label for="profilePictureInput">
+                                <img id="profilePicturePreview" src="../images/user-icon.png">
+                            </label>
+                            <input type="file" id="profilePictureInput" name="profilePicture" accept="image/*" required>
+                        </div>
+                    </div>
+
+                    <div class="formGroup">
+                        <button id="btnBack2" class="btn-design btnRight" type="button">חזור לחלק 2</button>
+                        <button id="btnSubmit" class="btn-design btnLeft" type="submit">הירשם</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="login-info">
+            <img src="../images/logo.png" alt="לוגו">
+            <p> ברוכים הבאים למקום המחבר בין מבוגרים ומתנדבים.<br>
+                כאן המתנדבים יוכלו להפיג את תחושת הבדידות של המבוגרים, להעניק להם תחושת מסוגלות ומשמעות ולהשכיל מניסיון
+                חייהם.
+                באתר זה תוכלו ליצור קשר עם מתנדבים או להתנדב בעצמכם וכך ליצור קהילה טובה ומאוחדת יותר.<br>
+                הצטרפו אלינו עוד היום!</p>
+        </div>
+    </div>
+
+    <script src="../JS/registrationForm.js"></script>
+
+</body>
+
+</html>
