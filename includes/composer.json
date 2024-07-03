@@ -1,0 +1,5 @@
+{
+    "require": {
+        "phpml/phpml": "^0.9.0"
+    }
+}
